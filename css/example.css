@@ -1,0 +1,43 @@
+/* :root{
+    --linkColor:purple
+}
+
+a{
+    color:var(--linkColor)
+}
+
+body{
+    display: flex;
+}
+
+@define-mixin square $dimension{  
+    width:$dimension;
+    height:$dimension;
+}
+
+.button{
+    @mixin square 200px;
+    &:hover{
+        background-color: var(--linkColor)
+    }
+} */
+
+
+$blue:#0000ff;
+$green:#00ff00;
+$radius:10px;
+.square{
+    background: $blue;
+    border-radius:$radius
+}
+@define-mixin square $demision{
+    width:$demision;
+    height:$demision;
+}
+.button{
+    @mixin square 200px;
+    background:$green;
+    &:hover{
+        background:$blue
+    }
+}
